@@ -1,0 +1,677 @@
+$mainColor: #00da68;
+$mainColorSecondary: #1ab4e8;
+$backGroundColor: #ffffff;
+$mainColorText: #000000;
+$colorOne: #183764;
+$color2: #c1c31b;
+$color3: #ff2626;
+$color4: #06c1c8;
+$color5: #e68b15;
+$boxShadow: #22222268;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('../../bootstrap/css/bootstrap.min.css');
+@import url('../../font/Fontawesome/css/all.min.css');
+@font-face {
+    font-family: SVNAnastasia;
+    src: url(../../font/Fonthome/SVN-Anastasia.ttf);
+}
+
+@font-face {
+    font-family: SVNFourth;
+    src: url(../../font/Fonthome/SVN-Fourth\ Regular.ttf);
+}
+
+@font-face {
+    font-family: SVNDays;
+    src: url(../../font/Fonthome/SVN-Days.otf);
+}
+
+@font-face {
+    font-family: SVN-Genica;
+    src: url(../../font/Fonthome/SVN-Genica\ Pro.otf);
+}
+
+@font-face {
+    font-family: SVN-Bango;
+    src: url(../../font/Fonthome/SVN-Bango.otf);
+}
+
+@font-face {
+    font-family: SVN-Nexa;
+    src: url(../../font/Fonthome/SVN-Nexa\ Rust\ Sans\ Black.ttf);
+}
+
+@font-face {
+    font-family: SVN-Berkshire;
+    src: url(../../font/Fonthome/SVN-Berkshire\ Swash.ttf);
+}
+
+* {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+#mainHeader {
+    .header-top {
+        background-color: $colorOne;
+        height: 21px;
+        width: 100%;
+        p {
+            color: $backGroundColor;
+            font-size: 14px;
+        }
+        .header-right {
+            list-style-type: none;
+            display: inline-flex;
+            .email {
+                margin-right: 15px;
+                line-height: 21px;
+                font-size: 14px;
+                color: $backGroundColor;
+                a {
+                    color: $color2;
+                    font-weight: 500;
+                }
+                i {
+                    font-size: 14px;
+                    color: $backGroundColor;
+                }
+            }
+            .language {
+                position: relative;
+                img {
+                    height: 22px;
+                }
+                .language-curent {
+                    text-decoration: none;
+                    position: absolute;
+                    top: -1px;
+                    display: flex;
+                    &::after {
+                        margin-left: 3px;
+                        font-family: "Font Awesome 5 Free";
+                        content: "";
+                        font-weight: 900;
+                        color: $backGroundColor;
+                        padding-top: 15px;
+                        -webkit-transform: translateY(-50%);
+                        -khtml-transform: translateY(-50%);
+                        -moz-transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                        -o-transform: translateY(-50%);
+                        transform: translateY(-50%);
+                    }
+                }
+                &:hover .language-select {
+                    display: block;
+                }
+                .language-select {
+                    list-style-type: none;
+                    display: none;
+                    background: $colorOne;
+                    height: 76px;
+                    position: absolute;
+                    top: 21px;
+                    left: -10px;
+                    margin: 0 auto;
+                    padding: 0px;
+                    li {
+                        border-bottom: 1px solid $mainColor;
+                        padding: 0px 10px;
+                    }
+                }
+            }
+        }
+    }
+    .header-content {
+        margin: 18px 0 18px 0;
+        .button-search {
+            background-color: $colorOne;
+        }
+        .image-content {
+            width: 47px;
+            display: inline;
+            img {
+                width: 47px;
+                height: auto;
+            }
+        }
+        .clock,
+        .phone {
+            display: inline-flex;
+            width: 48%;
+            .text-content {
+                width: 60%;
+                padding: 0 5px;
+                display: inline;
+                span {
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: $mainColor;
+                    display: list-item;
+                    padding-bottom: 6px;
+                }
+                p {
+                    line-height: 3px;
+                    font-size: 11px;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                    color: $colorOne;
+                }
+                p.text-phone {
+                    line-height: 3px;
+                    font-size: 12px;
+                    font-weight: bold;
+                    margin-bottom: 15px;
+                    color: $color3;
+                }
+            }
+        }
+    }
+    #mainMenu {
+        background-color: $mainColorSecondary;
+        height: 52px;
+        .navbar {
+            padding: 0;
+            width: 100%;
+            .navbar-collapse,
+            .nav {
+                width: 100%;
+            }
+            .show {
+                .nav-link {
+                    background-color: #adff2f00;
+                    height: 52px;
+                    font-weight: 600;
+                    border-radius: 0px;
+                }
+            }
+            .nav-item {
+                &.cart {
+                    position: relative;
+                    float: right;
+                    display: contents;
+                    a {
+                        color: $backGroundColor;
+                        i {
+                            color: $backGroundColor;
+                            font-size: 20px;
+                        }
+                        span {
+                            width: 18px;
+                            height: 18px;
+                            background-color: red;
+                            font-size: 11px;
+                            color: #fff;
+                            border-radius: 90pc;
+                            position: absolute;
+                            font-weight: 600;
+                            padding: 2px;
+                            right: 5px;
+                            top: 10px;
+                        }
+                    }
+                }
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                text-transform: capitalize;
+                .dropdown-menu.show {
+                    border-radius: 0;
+                    padding: 0px;
+                    .dropdown-item {
+                        border-bottom: 1px solid $mainColorSecondary;
+                    }
+                }
+                .nav-link {
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    display: flex;
+                    color: $backGroundColor;
+                    padding-top: 14px;
+                    &.active {
+                        background-color: #00da68;
+                        height: 52px;
+                        font-weight: 600;
+                        border-radius: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#mainContents {
+    min-height: 2000px;
+    #carousel {
+        min-height: 400px;
+        img {
+            width: 100%;
+        }
+        .carousel-inner {
+            .carousel-item {
+                .carousel-caption {
+                    position: absolute;
+                    right: -34%;
+                    bottom: 205px;
+                    left: 15%;
+                    z-index: 10;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    color: #fff;
+                    h3 {
+                        color: $mainColor;
+                        font-weight: bold;
+                        font-size: 24px;
+                        font-family: SVNDays;
+                    }
+                    p {
+                        color: $mainColorText;
+                        font-family: SVNFourth;
+                    }
+                }
+            }
+        }
+        .carousel-control-left {
+            position: absolute;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            right: 80px;
+            padding: 7px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .carousel-control-right {
+            position: absolute;
+            bottom: 20px;
+            width: 60px;
+            height: 60px;
+            right: 20px;
+            padding: 7px;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    #categorys {
+        padding: 60px 0 0;
+        min-height: 338px;
+        .item {
+            margin: 0 auto;
+            .category-image {
+                img {
+                    width: 110px;
+                    height: auto;
+                }
+            }
+            &:nth-child(1) h5 {
+                color: #06c1c8;
+            }
+            &:nth-child(2) h5 {
+                color: #d824c1;
+            }
+            &:nth-child(3) h5 {
+                color: #e68b15;
+            }
+            .category-content {
+                h5 {
+                    font-size: 15px;
+                    font-weight: bold;
+                    text-align: center;
+                }
+                p {
+                    font-size: 11px;
+                    color: $mainColorText;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    #about {
+        background-image: url(../images/G-_Tai-Lieu_DR-SAFE2_02.png);
+        min-height: 543px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .about-image {
+            position: relative;
+            .water-image {
+                position: absolute;
+                top: 10px;
+                right: 30px;
+                width: 97%;
+                object-fit: cover;
+                position: absolute;
+                top: 65px;
+                left: 89px;
+            }
+        }
+        .about-content {
+            padding: 90px 90px 30px;
+            h2 {
+                text-align: center;
+                color: $mainColor;
+                font-size: 25px;
+                font-weight: bold;
+            }
+            p {
+                text-align: center;
+            }
+        }
+        .about-item {
+            justify-content: center;
+            display: block;
+            margin: 0 auto;
+            display: flex;
+            .item {
+                min-width: 180px;
+                position: relative;
+                display: inline-flex;
+                justify-content: center;
+                .item-number {
+                    position: absolute;
+                    top: 33px;
+                    right: 37%;
+                    color: #fff;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+                .item-text {
+                    position: absolute;
+                    bottom: -39px;
+                    text-align: center;
+                    justify-items: center;
+                    display: flex;
+                    font-size: 16px;
+                    font-weight: 700;
+                    justify-content: center;
+                }
+                &:nth-last-child(odd) .item-text {
+                    color: $mainColor;
+                }
+                &:nth-last-child(even) .item-text {
+                    color: $mainColorSecondary;
+                }
+            }
+        }
+        .about-detail {
+            text-align: right;
+            position: absolute;
+            right: 100px;
+            bottom: -120px;
+            a,
+            i {
+                color: $mainColorText;
+                font-size: 17px;
+            }
+        }
+    }
+    #products-food {
+        background-image: url(../images/bg-f.png);
+        min-height: 1180px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 120px;
+        .title {
+            padding-top: 70px;
+            h2 {
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-family: SVN-Nexa;
+                color: $color4;
+            }
+            p {
+                text-align: center;
+                font-family: SVNAnastasia;
+            }
+            .line {
+                background-image: url(../images/DR-SAFE2_14.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 335px;
+                height: 33px;
+                margin: 0 auto;
+                display: block;
+            }
+        }
+        .item-product {
+            .item-image {
+                border-radius: 4px;
+                overflow: hidden;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+            .item-content {
+                .item-title {
+                    text-align: center;
+                    margin-top: 10px;
+                    color: $color4;
+                    font-weight: 600;
+                    font-size: 18px;
+                    font-family: SVN-Genica;
+                }
+                .item-price,
+                span {
+                    font-family: SVN-Bango;
+                    color: $color3;
+                    text-align: center;
+                    font-size: 16px;
+                }
+                .btn-even {
+                    text-align: center;
+                    .btn-now,
+                    .btn-buy {
+                        box-shadow: 0xp 2px 1px 2px #000;
+                        border-radius: 30px;
+                        background-color: $mainColorSecondary;
+                        color: $backGroundColor;
+                        font-size: 15px;
+                        font-weight: bold;
+                        border-left: 2px solid #088f95;
+                        border-bottom: 2px solid #088f95;
+                        i {
+                            color: $backGroundColor;
+                            font-size: 15px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .product-more {
+            padding-top: 60px;
+            text-align: center;
+            a,
+            i {
+                color: $mainColorText;
+                font-size: 25px;
+            }
+        }
+    }
+    #products-equipment {
+        background-image: url(../images/DR-SAFE2_02.png);
+        min-height: 1180px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .title {
+            padding-top: 70px;
+            h2 {
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-family: SVN-Nexa;
+                color: $color5;
+            }
+            p {
+                text-align: center;
+                font-family: SVNAnastasia;
+            }
+            .line {
+                background-image: url(../images/Group\ 4.png);
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 235px;
+                height: 33px;
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        .item-product {
+            .item-image {
+                border-radius: 4px;
+                overflow: hidden;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                }
+            }
+            .item-content {
+                .item-title {
+                    text-align: center;
+                    margin-top: 10px;
+                    color: $color5;
+                    font-weight: 600;
+                    font-size: 18px;
+                    font-family: SVN-Genica;
+                }
+                .item-price,
+                span {
+                    font-family: SVN-Bango;
+                    color: $color5;
+                    text-align: center;
+                    font-size: 16px;
+                }
+                .btn-even {
+                    text-align: center;
+                    .btn-now,
+                    .btn-buy {
+                        box-shadow: 0xp 2px 1px 2px #000;
+                        border-radius: 30px;
+                        background-color: $color5;
+                        color: $backGroundColor;
+                        font-size: 15px;
+                        font-weight: bold;
+                        border-left: 2px solid $color3;
+                        border-bottom: 2px solid $color3;
+                        i {
+                            color: $backGroundColor;
+                            font-size: 15px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .product-more {
+            padding-top: 60px;
+            text-align: center;
+            a,
+            i {
+                color: $mainColorText;
+                font-size: 25px;
+            }
+        }
+    }
+    #form-email {
+        background-image: url(../images/form.png);
+        min-height: 125px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .open-envelope {
+            position: absolute;
+            top: 10px;
+            left: 49%;
+            width: 30px;
+        }
+        .text-image {
+            display: inline;
+            img {
+                display: inline-flex;
+            }
+            p {
+                font-family: SVN-Berkshire;
+                display: inline-flex;
+                line-height: 18px;
+            }
+        }
+        .form-custom {
+            .btn-custom {
+                background-image: linear-gradient(to right, $color4, $mainColor);
+                color: $backGroundColor;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+#mainFooter {
+    font-size: 15px;
+    height: 22px;
+    background-color: $backGroundColor;
+    h3 {
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 20px;
+        color: $backGroundColor;
+    }
+    .footer-content {
+        border-top: 4px solid $mainColor;
+        background-color: $colorOne;
+        min-height: 250px;
+        a,
+        p,
+        i {
+            color: #fff;
+            line-height: 30px;
+        }
+        .customer {
+            ul {
+                list-style-type: none;
+                li {
+                    a {
+                        color: #fff;
+                        line-height: 30px;
+                    }
+                    &::before {
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        content: "";
+                        padding-right: 3px;
+                        font-size: 12px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .copyrighter {
+        p {
+            margin-bottom: 0;
+            color: $mainColorText;
+            font-weight: 600;
+        }
+        .social {
+            p {
+                i {
+                    color: $mainColorText;
+                }
+                text-align: right;
+                color: $mainColorText;
+            }
+        }
+    }
+}
