@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700&display=swap&subset=vietnamese');
+.col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths {position: relative;min-height: 1px;padding-right: 10px;padding-left: 10px;overflow: hidden;}
+.col-xs-5ths {width: 20%;float: left;}
+@media (min-width: 768px) {.col-sm-5ths {width: 20%;float: left;}}
+@media (min-width: 992px) {.col-md-5ths { width: 20%;float: left;}}
+@media (min-width: 1200px) {.col-lg-5ths {width: 20%;float: left;}}
+@media screen and (min-width: 1025px){
+    .dropdown2:hover >ul{display:block;}
+}
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1024px){
+   .navbar-default .navbar-nav>li>a{
+	   padding-left: 10px;
+	   padding-right: 10px;
+	   font-weight: 500;
+   }
+   .navbar-default .navbar-brand{
+	   padding-right: 10px;
+	   font-weight: 500;
+   }
+   .item-camket .content strong{
+   font-size: 13px;
+   }
+   .item-camket .content span{
+   font-size: 13px;
+   }
+}
+/*Ipad dọc(768 x 1024)*/
+@media screen and (max-width: 768px){
+    .sm-none{display: none;}
+    .sm-block{display: block;}
+    .navbar-form .form-group{
+    width: 85%;
+    }
+    .navbar-form .form-control{
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    }
+    .navbar-form button{
+    background-color: #67b313;
+    border-radius: 0px;
+    color: #fff;
+    border: 1px solid #67b313;
+    margin-left: -4px;
+    }
+    .navbar-form{
+    margin-top: 19px;
+    }
+    .navbar-toggle{
+    /* margin-top: 19px; */
+    /* border: 1px solid #67b313; */
+    border-radius: 0px;
+    }
+    .navbar-toggle .icon-bar{
+    background-color: #67b313;
+    }
+    .gio-hang a{
+		background-color: transparent;
+		color: #67b313;
+		padding: 0px;
+		font-size: 18px;
+		position: relative;
+		line-height: 10px;
+		margin-top: 26px;
+		}
+    .gio-hang a span{
+    position: absolute;
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    font-size: 13px;
+    line-height: 8px;
+    border-radius: 50%;
+    top: -7px;
+    left: 12px;
+    }
+}
+/*Tablet nhỏ(480 x 640)*/
+@media screen and (max-width: 767px){
+    
+    .xs-block{display:block;}
+    .xs-none{display: none !important;}
+    .breadcrumb{
+    	display:none;
+    }
+    .hc-nav-trigger.hc-nav-1{
+    	display: block !important;
+    }
+	.logo{
+		margin-left: -15px;
+	}
+	.item-camket .content{
+		margin-right: -10px;
+		margin-top: 10px;
+	}
+	.item-camket .content span{
+		font-weight: 600;
+		color: red;
+		font-size: 14px;
+	}
+ }
+/*Iphone(480 x 640)*/
+@media screen and (max-width: 320px){
+    
+}
+/*Smart phone nhỏ*/
+@media screen and (max-width: 240px){
+    
+}
+

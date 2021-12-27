@@ -1,0 +1,37 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} -d [OR]
+RewriteCond %{REQUEST_FILENAME} -s
+RewriteRule ^.*$ - [L]
+
+Options -Indexes
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+
+ErrorDocument 401 /index.php
+ErrorDocument 403 /index.php
+ErrorDocument 404 /index.php
+ErrorDocument 500 /index.php
+
+<files .htaccess> 
+order allow,deny 
+deny from all 
+</files> 
+
+<files config.php> 
+order allow,deny 
+deny from all 
+</files> 
+
+RewriteRule ^404/$ index.php?p=404 [L]
+
+RewriteRule ^(vn)$ index.php?com=&lang=vn [L]
+RewriteRule ^(us)$ index.php?com=&lang=us [L]
+
+RewriteRule ^([^/]*).html$	index.php?com=$1 [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&page=([0-9]+)$ index.php?com=$1&page=$2 [L]
+
+RewriteRule ^([^/]*)/([^/]*).html$ index.php?com=$1&alias=$2 [L]
+RewriteRule ^([^/]*)/([^/]*).html(.*)$ index.php?com=$1&alias=$2&page=$3 [L]
+
+RewriteRule ^([^/]*)/([^/]*)/([^/]*).html$ index.php?com=$1&alias=$2&alias1=$3 [L]
+RewriteRule ^([^/]*)/([^/]*)/([^/]*).html(.*)$ index.php?com=$1&alias=$2&alias1=$3&page=$4 [L]

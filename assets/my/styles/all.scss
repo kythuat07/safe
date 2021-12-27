@@ -11,6 +11,7 @@ $boxShadow: #22222268;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 @import url('../../bootstrap/css/bootstrap.min.css');
 @import url('../../font/Fontawesome/css/all.min.css');
+@import url('../../../templates/css/styles.css');
 @font-face {
     font-family: SVNAnastasia;
     src: url(../../font/Fonthome/SVN-Anastasia.ttf);
@@ -59,6 +60,8 @@ $boxShadow: #22222268;
         background-color: $colorOne;
         height: 21px;
         width: 100%;
+        padding-top: 2px;
+        padding-bottom: 2px;
         p {
             color: $backGroundColor;
             font-size: 14px;
@@ -66,6 +69,7 @@ $boxShadow: #22222268;
         .header-right {
             list-style-type: none;
             display: inline-flex;
+            float: right;
             .email {
                 margin-right: 15px;
                 line-height: 21px;
@@ -81,10 +85,11 @@ $boxShadow: #22222268;
                 }
             }
             .language {
-                position: relative;
+                width: 30px;
                 img {
                     height: 22px;
                 }
+                position: relative;
                 .language-curent {
                     text-decoration: none;
                     position: absolute;
@@ -105,26 +110,37 @@ $boxShadow: #22222268;
                         transform: translateY(-50%);
                     }
                 }
-                &:hover .language-select {
+                &:active .language-select {
                     display: block;
                 }
-                .language-select {
+                #language-select {
                     list-style-type: none;
                     display: none;
                     background: $colorOne;
                     height: 76px;
                     position: absolute;
-                    top: 21px;
-                    left: -10px;
+                    top: 19px;
+                    left: 0px;
                     margin: 0 auto;
                     padding: 0px;
                     li {
                         border-bottom: 1px solid $mainColor;
                         padding: 0px 10px;
+                        width: 40px;
+                    }
+                    &.show {
+                        display: block;
+                        z-index: 99999;
                     }
                 }
             }
         }
+    }
+    .form-mobie {
+        display: none;
+    }
+    .form-pc {
+        display: flex;
     }
     .header-content {
         margin: 18px 0 18px 0;
@@ -173,8 +189,33 @@ $boxShadow: #22222268;
     }
     #mainMenu {
         background-color: $mainColorSecondary;
-        height: 52px;
+        min-height: 52px;
         .navbar {
+            .cart {
+                position: relative;
+                float: right;
+                display: contents;
+                a {
+                    color: $backGroundColor;
+                    i {
+                        color: $backGroundColor;
+                        font-size: 20px;
+                    }
+                    span {
+                        width: 18px;
+                        height: 18px;
+                        background-color: red;
+                        font-size: 11px;
+                        color: #fff;
+                        border-radius: 90pc;
+                        position: absolute;
+                        font-weight: 600;
+                        padding: 2px;
+                        right: 5px;
+                        top: 10px;
+                    }
+                }
+            }
             padding: 0;
             width: 100%;
             .navbar-collapse,
@@ -190,31 +231,6 @@ $boxShadow: #22222268;
                 }
             }
             .nav-item {
-                &.cart {
-                    position: relative;
-                    float: right;
-                    display: contents;
-                    a {
-                        color: $backGroundColor;
-                        i {
-                            color: $backGroundColor;
-                            font-size: 20px;
-                        }
-                        span {
-                            width: 18px;
-                            height: 18px;
-                            background-color: red;
-                            font-size: 11px;
-                            color: #fff;
-                            border-radius: 90pc;
-                            position: absolute;
-                            font-weight: 600;
-                            padding: 2px;
-                            right: 5px;
-                            top: 10px;
-                        }
-                    }
-                }
                 justify-content: center;
                 align-items: center;
                 text-align: center;
@@ -343,9 +359,6 @@ $boxShadow: #22222268;
         .about-image {
             position: relative;
             .water-image {
-                position: absolute;
-                top: 10px;
-                right: 30px;
                 width: 97%;
                 object-fit: cover;
                 position: absolute;
@@ -413,7 +426,7 @@ $boxShadow: #22222268;
             }
         }
     }
-    #products-food {
+    .products-food {
         background-image: url(../images/bg-f.png);
         min-height: 1180px;
         background-repeat: no-repeat;
@@ -498,7 +511,7 @@ $boxShadow: #22222268;
             }
         }
     }
-    #products-equipment {
+    .products-equipment {
         background-image: url(../images/DR-SAFE2_02.png);
         min-height: 1180px;
         background-repeat: no-repeat;
@@ -550,7 +563,7 @@ $boxShadow: #22222268;
                 .item-price,
                 span {
                     font-family: SVN-Bango;
-                    color: $color5;
+                    color: $color3;
                     text-align: center;
                     font-size: 16px;
                 }
@@ -663,6 +676,7 @@ $boxShadow: #22222268;
             margin-bottom: 0;
             color: $mainColorText;
             font-weight: 600;
+            text-align: left;
         }
         .social {
             p {
@@ -673,5 +687,160 @@ $boxShadow: #22222268;
                 color: $mainColorText;
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    #mainHeader {
+        #logo {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .form-mobie {
+            display: flex;
+        }
+        .form-pc {
+            display: none;
+        }
+        .header-top {
+            text-align: center;
+            min-height: 21px;
+            height: unset;
+            .header-right {
+                float: unset;
+            }
+        }
+        .header-content {
+            .clock {
+                .text-content {
+                    p,
+                    p.text-phone {
+                        font-size: 9px;
+                    }
+                    span {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+        #mainMenu {
+            min-height: 20px;
+            .navbar {
+                position: relative;
+            }
+            .nav {
+                display: block;
+                background-color: $backGroundColor;
+                .nav-item {
+                    border-bottom: 1px solid $mainColorSecondary;
+                    .nav-link {
+                        color: $mainColorText;
+                    }
+                    .dropdown-menu.show {
+                        display: contents;
+                    }
+                    &.cart {
+                        top: -5px;
+                        right: 1px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+    #mainFooter {
+        .copyrighter {
+            p {
+                text-align: center;
+            }
+            .social p {
+                text-align: center;
+            }
+        }
+    }
+    #mainContents {
+        #carousel {
+            min-height: 100px;
+            .carousel-inner {
+                .carousel-item {
+                    img {
+                        min-height: 150px;
+                        object-fit: cover;
+                    }
+                    .carousel-caption {
+                        display: none;
+                    }
+                }
+            }
+            .carousel-control-left {
+                position: absolute;
+                bottom: 5px;
+                width: 35px;
+                height: 35px;
+                right: 30px;
+                padding: 7px;
+            }
+            .carousel-control-right {
+                position: absolute;
+                bottom: 5px;
+                width: 35px;
+                height: 35px;
+                right: 0px;
+                padding: 7px;
+            }
+        }
+        #about {
+            .about-image {
+                position: unset;
+                .water-image {
+                    position: unset;
+                }
+            }
+            .about-content {
+                padding: 0;
+            }
+            .about-item {
+                position: unset;
+                .item {
+                    margin-bottom: 35px;
+                    .item-number {
+                        right: 43%;
+                    }
+                }
+            }
+        }
+        #products-food {
+            .title {
+                .line {
+                    width: 200px;
+                }
+            }
+        }
+    }
+    #logo {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+}
+
+// custom child page 
+.breadcrumb {
+    background-color: unset;
+    li {
+        .active {
+            font-weight: 600;
+        }
+        a {
+            span {
+                color: $colorOne;
+            }
+        }
+    }
+    li+li:before {
+        content: "/\00a0";
+        padding: 0 5px;
+        color: $colorOne;
     }
 }
