@@ -157,7 +157,18 @@
 	define('_giabansi','Giá bán sỉ liên hệ');
 	define('_dt_qc','Đối tác - Quảng cáo');
 	define('_wellcome','Chào mừng bạn đến DR SAFE!');
-
 	define('_nhantinchochungtoi','Nhắn tin cho chúng tôi');
-
+	define('_buynow','MUA NGAY');
+	define('_addcart','THÊM VÀO');
+	define('_contact','Liên Hệ');
+	define('_register','Đăng ký');
+	define('_relatedproducts','Sản phẩm liên quan');
+	define('_detail','Chi tiết sản phẩm');
+	define('_comment','Bình luận');
+	define('_code','Mã sản phẩm');
+	define('_product_description','Mô tả sản phẩm');
+	define('_price','Giá');
+	define('_payment_methods','Phương thức thanh toán');
+	define('_continue','Tiếp tục');
+	define('_payment_total','Tổng tiền thanh toán');
 ?>

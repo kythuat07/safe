@@ -287,13 +287,13 @@ if(isset($_SESSION['id_thanhvien']) and $_SESSION['id_thanhvien'] !=""){
     <ol vocab="https://schema.org/" typeof="BreadcrumbList" class="breadcrumb"> 
         <li property="itemListElement" typeof="ListItem"> 
             <a property="item" typeof="WebPage" href="http://demo10.phuongnamvina.vn/"> 
-                    <span property="name">Trang chủ</span>
+                    <span property="name"><?= _trangchu ?></span>
             </a> <meta property="position" content="1"> 
         </li>
 
         <li property="itemListElement" typeof="ListItem"> 
             <a class="active" property="item" typeof="WebPage" href="<?=URLPATH.$com?>.html"> 
-                <span property="name">Giỏ hàng</span>
+                <span property="name"><?= _cart ?></span>
             </a> <meta property="position" content="2"> 
         </li>
     </ol>
@@ -377,7 +377,7 @@ if(isset($_SESSION['id_thanhvien']) and $_SESSION['id_thanhvien'] !=""){
                         </div>
 
                         <div class="form-group">
-                            <label for="thanhtoan">Chọn phương thức thanh toán</label>
+                            <label for="thanhtoan"><?= _payment_methods ?></label>
                             <select name="thanhtoan" class="form-control" id="thanhtoan">
                                 <?php 
                                     $_hinhthucthanhtoan = $d->o_sel("*","#_hinhthucthanhtoan","hien_thi = 1","so_thu_tu asc");
@@ -469,7 +469,7 @@ if(isset($_SESSION['id_thanhvien']) and $_SESSION['id_thanhvien'] !=""){
                                             </tr>
                                     <?php }}} ?>
                                     <tr>
-                                        <td colspan="5"  class="text-right">Tổng tiền:</td>
+                                        <td colspan="5"  class="text-right"><?= _totalmoney ?>:</td>
                                         <td class="text-right"><font class="color-main"><?=$d->vnd($tongtien)?></font></td>
                                     </tr>
                                     <!--tr>
@@ -479,12 +479,12 @@ if(isset($_SESSION['id_thanhvien']) and $_SESSION['id_thanhvien'] !=""){
                                     <tr>
                                     <td colspan="2" style="border-right: 0">
                                     <div class="mua-tiep">
-                                        <a href="<?=URLPATH?>" style="color: red;">Tiếp tục mua hàng</a>
+                                        <a href="<?=URLPATH?>" style="color: red;"><?= _continue ?></a>
                                     </div>
                                     </td>
                                     <td colspan="4" style="border-left: 0;">
                                         <div class="tong_tt">
-                                        <h3 class="text-right"><span>Số tiền cần thanh toán:</span> <font id="tong_tien_gh" class="color-main"><?=$d->vnd($tongtien)?></font></h3>
+                                        <h3 class="text-right"><span><?= _payment_total ?>:</span> <font id="tong_tien_gh" class="color-main"><?=$d->vnd($tongtien)?></font></h3>
                                         </div>
                                     </td>
 

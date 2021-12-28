@@ -119,10 +119,6 @@ body {
     margin-bottom: 5px;
 }
 
-header {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 
 .navbar-default {
     margin: 0px;
@@ -278,19 +274,6 @@ header {
     color: #7b7878;
 }
 
-.item-product .chitiet {}
-
-.item-product .chitiet a {
-    background-color: #1ab4e8;
-    color: #fff;
-    padding: 5px 15px;
-    display: inline-block;
-    margin-top: 10px;
-    border-radius: 8px;
-}
-
-.item-product .chitiet a:hover {}
-
 .list-product {
     position: relative;
     margin-top: 0px;
@@ -315,20 +298,6 @@ header {
     outline: none;
 }
 
-.title-home2 {
-    font-size: 15px;
-    text-transform: uppercase;
-    font-weight: 600;
-    background: url(../images/title-right.png) no-repeat center right;
-    background-size: contain;
-    text-align: center;
-    margin-top: 13px;
-    position: relative;
-    z-index: 1;
-    margin-bottom: -1px;
-    padding: 9px 6px 17px 6px;
-}
-
 .title-home2 span {
     color: #183764;
 }
@@ -338,22 +307,7 @@ header {
     /* padding-right: 5px; */
 }
 
-.nav-right ul {
-    list-style: none;
-    padding: 0px;
-    background-color: #00da68;
-    background: -moz-linear-gradient(bottom, #68b213 30%, #00da68 70%);
-    background: -o-linear-gradient(bottom, #68b213 30%, #00da68 70%);
-    background: -ms-linear-gradient(bottom, #68b213 30%, #00da68 70%);
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(0.3, #00da68), color-stop(0.7, #00da68));
-    border-radius: 5px;
-    position: relative;
-    padding-top: 10px;
-    /* top: -17px; */
-}
-
 .nav-right ul li {
-    border-top: 1px solid #d21720;
     border-bottom: 1px solid #f56d74;
 }
 
@@ -374,28 +328,6 @@ header {
 .nav-right ul li a:hover {
     text-decoration: none;
     background-color: #1ab4e8;
-}
-
-.nav-right ul:before {
-    content: "";
-    width: 7px;
-    height: 7px;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    top: 3px;
-    left: 5px;
-}
-
-.nav-right ul:after {
-    content: "";
-    width: 7px;
-    height: 7px;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    top: 3px;
-    right: 5px;
 }
 
 .hotro {

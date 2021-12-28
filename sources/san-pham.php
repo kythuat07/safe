@@ -30,11 +30,6 @@
             <h1 class="title-home"><span><?=$loai['ten_vn']?></span></h1>
             <?= $d->breadcrumbList($loai['id'],$lang,URLPATH) ?>
             <div class="clearfix"></div>
-			<?php if(!empty($query['mo_ta_'.$lang])){ ?>	
-				<div class="des-module mb10">
-					<?= $query['mo_ta_'.$lang]; ?>			
-				</div>
-			<?php } ?>
             <?php if(count($sanpham)>0){ ?>
                 <div class="row list-product m-10">
                     <?php include 'ct_product.php'; ?>

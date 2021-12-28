@@ -81,11 +81,11 @@ if(isset($_POST['lienhe'])){
                 <div class="col-md-6 col-sm-12">
                     <h1 class="ten-sp"><?=$ctsp[0]['ten_'.$lang] ?></h1>
                     <hr style="margin-top: 10px;margin-bottom: 10px;border-color: #eae8e8;">
-                    <strong>Mã sản phẩm: <?=$ctsp[0]['ma_sp'] ?></strong>
+                    <strong><?= constant('_code'); ?>: <?=$ctsp[0]['ma_sp'] ?></strong>
                     <hr style="margin-top: 10px;margin-bottom: 10px;border-color: #eae8e8;">
-                    <div class="giaban">Giá bán: <?=$gia?></div>
+                    <div class="giaban"><?= constant('_price'); ?>: <?= number_format($gia); ?> VNĐ</div>
                     <hr style="margin-top: 10px;margin-bottom: 10px;border-color: #eae8e8;">
-                    <p><b>Mô tả sản phẩm:</b></p>
+                    <p><b><?= constant('_product_description'); ?>:</b></p>
                     <div>		
                         <?=$ctsp[0]['mo_ta_'.$lang] ?>
                     </div>
@@ -95,11 +95,13 @@ if(isset($_POST['lienhe'])){
                             <input type="hidden" name="id" value="<?=$ctsp[0]['id'] ?>">
                             <div class="row m-5">
                                 <div class="col-sm-3 box-sl p5">
-                                    <input type="number" value="1" class="soluong"  />
+                                    <input type="number" value="1" class="soluong"  name="soluong"/>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="col-sm-9 p5">
-                                    <button type="submit" name="addcart" class="btn btn-block btn-lienhe"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mua hàng</button>
+                                    <button type="submit" name="addcart" class="btn buy-now">
+                                        <i class="fa text-white fa-shopping-cart" aria-hidden="true"></i> <?= constant('_addcart'); ?>
+                                    </button>
                                 </div>
                             </div>
                             
@@ -108,13 +110,17 @@ if(isset($_POST['lienhe'])){
                     </div>
                 </div>
             </div>
-            <ul class="nav nav-tabs tab-sp">
-                <li class="active"><a data-toggle="tab" href="#home">Thông tin chi tiết</a></li>
-                <!--li><a data-toggle="tab" href="#menu2">Hướng dẫn thanh toán</a></li-->
-                <li><a data-toggle="tab" href="#menu3">Bình luận</a></li>
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#home"><?= constant('_detail'); ?></a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#menu3"><?= constant('_comment'); ?></a>
+                </li>
             </ul>
             <div class="tab-content">
-                <div id="home" class="tab-pane fade in active">
+                <div id="home" class="container tab-pane active"><br>
                     <div class="chitiettin">
                     <?=$ctsp[0]['thong_tin_'.$lang] ?>
                     </div>
@@ -129,7 +135,7 @@ if(isset($_POST['lienhe'])){
                 </div>
             </div>
             
-            <h3 class="title-home"><span>Sản phẩm liên quan</span></h3>
+            <h3 class="title-home"><span><?= constant('_relatedproducts'); ?></span></h3>
             <div class="row list-product m-5">
                 <?php include 'ct_product.php'; ?>
             </div>

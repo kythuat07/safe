@@ -167,9 +167,9 @@
                     <?php }  ?>
                     </a>
                 </li>
-				<li class="list-group-item <?php if($_GET['p'] == 'ql-email') echo "active"?>">
+				<!-- <li class="list-group-item <?php if($_GET['p'] == 'ql-email') echo "active"?>">
                     <a href="?p=ql-email&a=man"><i class="glyphicon glyphicon-chevron-right"></i> <span>Danh sách điện thoại</span></a>
-                </li>
+                </li> -->
                 <?php } ?>
             </ul>
         </li>

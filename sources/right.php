@@ -8,7 +8,7 @@
 <div class="xs-none">
 <link rel="stylesheet" type="text/css" href="<?=URLPATH?>templates/module/slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="<?=URLPATH?>templates/module/slick/slick-theme.css"/>
-<h2 class="title-home2"><span>Danh mục sản phẩm</span></h2>
+<h2 class="title-home2"><span><?= constant('_danhmucsanpham'); ?></span></h2>
 <nav class="nav-right">
     <ul>
         <?php foreach ($nav_left as $key => $value) {?>
@@ -20,21 +20,7 @@
         <?php } ?>
     </ul>
 </nav>
-<h2 class="title-home2"><span>Hỗ trợ  trực tuyến</span></h2>
-<div class="hotro" style="margin-bottom:30px;">
-    <img src="<?=URLPATH?>img_data/images/<?=$support[0]['hinh_anh']?>" />
-    <div class="hotline-right">
-        Hotline: <?=$hotline?>
-    </div>
-	<div class="zalo">
-        Zalo: <a style="color: #12b1d7;" href="http://zalo.me/<?=$zalo?>"><?=$zalo?></a>
-    </div>
-    <div class="email">
-        Email: <?=$skype?>
-    </div>
-    
-</div>
-<h2 class="title-home2"><span>Sản phẩm nổi bật</span></h2>
+<h2 class="title-home2"><span><?= constant('_sanphamnoibat'); ?></span></h2>
 <div class="san-phamhot" style="margin-bottom:30px;">
 <?php
 foreach ($sanpham as $key => $item) {
@@ -60,7 +46,7 @@ foreach ($sanpham as $key => $item) {
     </div>
 <?php }?>
 </div>
-<h2 class=" title-home2"><span>Tin tức nổi bật</span></h2>
+<h2 class=" title-home2"><span><?= constant('_news'); ?></span></h2>
 <div class="new-righ" style="margin-bottom:30px;">
     <?php foreach ($news_left as $key => $item) {?>
     <div class="item-new-right">
@@ -77,10 +63,10 @@ foreach ($sanpham as $key => $item) {
     </div>
     <?php } ?>
 </div>
-<h2 class=" title-home2"><span>Video clip</span></h2>
+<!-- <h2 class=" title-home2"><span>Video clip</span></h2>
 <div class="video">
     <iframe width="560" height="200" src="<?= $video['link']?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</div> -->
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="<?=URLPATH?>templates/module/slick/slick.min.js"></script>
 <script type="text/javascript">

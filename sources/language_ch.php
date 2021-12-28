@@ -59,5 +59,18 @@
 	define('_wellcome','ようこそ DR SAFE!');
 	define('_nhapdiachiemail','情報にサインアップしてください！');
 	define('_danhmucsanpham','カテゴリー');
+	define('_buynow','今買う');
+	define('_addcart','カートに追加');
+	define('_contact','コンタクト');
+	define('_register','登録');
+	define('_relatedproducts','関連製品');
+	define('_detail','詳細');
+	define('_comment','コメント');
+	define('_product_description','製品コード');
+	define('_code','製品説明');
+	define('_price','価格');
+	define('_payment_methods','お支払い方法');
+	define('_continue','次');
+	define('_payment_total','支払総額');
 ?> 
  

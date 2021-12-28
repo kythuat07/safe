@@ -16,10 +16,8 @@ $arrCategory = $d->o_fet("select * from #_category where hien_thi = 1 AND module
 
 
 
+
 ?>
-
-
-
 <header id="mainHeader">
     <div class="header-top">
         <div class="container">
@@ -55,41 +53,24 @@ $arrCategory = $d->o_fet("select * from #_category where hien_thi = 1 AND module
         <div class="container">
             <div class="row">
                 <div class="col-md-2">
-                    <a id="logo" href="index.html">
+                    <a id="logo" href="<?=URLPATH?>">
                         <img src="assets/my/images/logo.png" alt="DRSAFE" srcset="assets/my/images/logo.png">
                     </a>
                 </div>
                 <div class="offset-md-1"></div>
                 <div class="col-md-5">
-                    <form action="search.html" method="get">
-                        <div class="input-group mt-3 mb-3 form-pc">
-                            <div class="input-group-prepend">
-                                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
-                                <?= constant('_danhmucsanpham'); ?>
-                                </button>
-                                <div class="dropdown-menu">
-                                    <?php foreach ($arrCategory as $key => $value) { ?> 
-                                    <a class="dropdown-item" href=" <?=  $value['alias_'.$lang] ?>"><?=  $value['ten_'.$lang] ?></a>
-                                    <?php } ?> 
-                                </div>
-                            </div>
-                            <input type="text" class="form-control" placeholder="<?= constant('_search'); ?>...">
+                    <form action="search.html" method="post">
+                        <div class="input-group mt-3 mb-3 ">
+                            <select class="input-group-prepend select-search" name="categorysearch">
+                                <option value="0" ><?= constant('_danhmucsanpham'); ?></option>
+                                <?php foreach ($arrCategory as $key => $value) { ?> 
+                                    <?php $strAction = $_REQUEST['categorysearch'] == $value['id_loai'] ?'selected':''; ?>
+                                    <option <?= $strAction; ?> class="dropdown-item" value="<?= $value['id_loai']; ?>"><?=  $value['ten_'.$lang] ?></option>
+                                <?php } ?> 
+                            </select>
+                            <input type="text" name="textsearch" value="<?php echo  $_REQUEST['textsearch']; ?>" class="textsearch form-control" placeholder="<?= constant('_search'); ?>...">
                             <div class="input-group-append">
-                                <button class="btn btn-success button-search" type="submit">TÌM KIẾM</button>
-                            </div>
-                        </div>
-                        <div class="input-group mt-3 mb-3 form-mobie">
-                            <div class="input-group-prepend">
-                                <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"></button>
-                                <div class="dropdown-menu">
-                                    <a  class="dropdown-item" href="#">Link 1</a>
-                                    <a class="dropdown-item" href="#">Link 2</a>
-                                    <a class="dropdown-item" href="#">Link 3</a>
-                                </div>
-                            </div>
-                            <input type="text" class="form-control" placeholder="<?= constant('_search'); ?>...">
-                            <div class="input-group-append">
-                                <button class="btn btn-success button-search" type="submit"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-success button-search" type="submit"><?= constant('_search'); ?></button>
                             </div>
                         </div>
                     </form>
@@ -127,7 +108,7 @@ $arrCategory = $d->o_fet("select * from #_category where hien_thi = 1 AND module
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
 
-                        <ul class="nav nav-pills  nav-justified">
+                        <ul class="nav nav-pills nav-justified">
                             <li class="nav-item">
                                 <a class="nav-link active" href="<?=URLPATH?>">Trang chủ</a>
                             </li>

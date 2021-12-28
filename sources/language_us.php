@@ -159,4 +159,18 @@
 	define('_dt_qc','Partners');
 	define('_tintucnoibat','Featured news');
 	define('_nhantinchochungtoi','Send a message');
+	
+	define('_buynow','BUY NOW');
+	define('_addcart','ADD CART');
+	define('_contact','Contact');
+	define('_register','Register');
+	define('_relatedproducts','Related Products');
+	define('_detail','Detail');
+	define('_comment','Comment');
+	define('_code','Code');
+	define('_product_description','Product Description');
+	define('_price','Price');
+	define('_payment_methods','Payment methods');
+	define('_continue','Continue');
+	define('_payment_total','Payment total');
 ?>

@@ -67,7 +67,7 @@ switch ($_POST['action']) {
         $d->setTable('#_lienhe');   
         $data['email'] = trim(addslashes($_POST['email']));
         $data['type'] = 'email';
-        $data['noi_dung'] = 'Nhận thông tin về Song Minh';
+        $data['noi_dung'] = 'Nhận thông tin về';
         if($d->insert($data)) {
             reponse(true, 'Đăng ký nhận thông tin thành công.');
         }else{

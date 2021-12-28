@@ -55,20 +55,20 @@
             <div class="clearfix"></div>
             <div class="row">
                 <div class="col-sm-6">
-                    <h3 style="padding-left: 15px; text-transform: uppercase;font-size: 15px;font-weight: 600;margin-top: 10px;margin-bottom: 20px;text-align: center;">Liên hệ với chúng tôi</h3>
+                    <h3 style="padding-left: 15px; text-transform: uppercase;font-size: 15px;font-weight: 600;margin-top: 10px;margin-bottom: 20px;text-align: center;"><?= _contact ?></h3>
                     <form id="form-contact" method="post">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <input type="text" id="ho_ten" required  name="ho_ten" class="form-control"  placeholder="<?=_hoten ?> (*)">
+                                <input type="text" id="ho_ten" required  name="ho_ten" class="form-control"  placeholder="<?= _hoten ?> (*)">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="dia_chi" name="dia_chi" class="form-control"  placeholder="<?=_address ?>">
+                                <input type="text" id="dia_chi" name="dia_chi" class="form-control"  placeholder="<?= _address ?>">
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" name="email" class="form-control"  placeholder="Email (nếu có)">
                             </div>
                             <div class="form-group">
-                                <input type="text" id="so_dien_thoai" required name="so_dien_thoai" class="form-control" placeholder="<?=_sodienthoai ?>(*)">
+                                <input type="text" id="so_dien_thoai" required name="so_dien_thoai" class="form-control" placeholder="<?= _sodienthoai ?>(*)">
                             </div>
                         </div>
                         <div class="col-sm-12">
@@ -91,7 +91,7 @@
                     </form>
                 </div>
                 <div class="col-sm-6">
-					<h3 style="padding-left: 15px; text-transform: uppercase;font-size: 15px;font-weight: 600;margin-top: 10px;margin-bottom: 20px;text-align: center;">Thông tin liên hệ</h3>
+					<h3 style="padding-left: 15px; text-transform: uppercase;font-size: 15px;font-weight: 600;margin-top: 10px;margin-bottom: 20px;text-align: center;"><?= _noidunglienhe ?></h3>
                     <?=$dulieu_1['mo_ta_'.$_SESSION['lang']];?>
                     <div id="map">	
                         <?php if (!empty($information['map'])) { ?>

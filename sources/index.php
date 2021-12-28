@@ -11,14 +11,14 @@
         <div id="categorys">
             <div class="container">
                 <div class="row">
-                    <?php foreach ($arrCategorys as $key => $value) { ?>
+                    <?php $strClassNameType = ['food', 'drink', 'equipment'];  foreach ($arrCategorys as $key => $value) { ?>
                         
                         <div class="col-md-2 item" align="center">
                             <div class="category-image">
-                                <img src="<?= URLPATH.'img_data/images/'.$value['picture']; ?>">
+                                <img class="wow flipInY" data-wow-duration="5s" data-wow-delay="0s" src="<?= URLPATH.'img_data/images/'.$value['picture']; ?>">
                             </div>
                             <div class="category-content">
-                                <h5><?= $value['title_'.$lang] ?></h5>
+                                <h5 class="<?= $strClassNameType[$key] ; ?>"><?= $value['title_'.$lang] ?></h5>
                                 <p><?= $value['body_'.$lang] ?></p>
                             </div>
                         </div>
@@ -31,7 +31,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-5 about-image">
-                        <img class="water-image" src="<?= URLPATH.'img_data/images/'.$arrAbout[0]['hinh_anh']; ?>">
+                        <img class="water-image swing wow" data-wow-duration="5s" data-wow-delay="0s" src="<?= URLPATH.'img_data/images/'.$arrAbout[0]['hinh_anh']; ?>">
                     </div>
                     <div class="col-md-7">
                         <div class="about-content">
@@ -49,7 +49,7 @@
                                 <?php } ?>
                             </div>
                         </div>
-                        <p class="about-detail"><a href="<?= URLPATH ?>gioi-thieu.html">Chi tiết <i class="fas fa-angle-double-right"></i></a></p>
+                        <p class="about-detail"><a href="<?= URLPATH ?>ve-chung-toi.html"><?= constant('_viewmore'); ?> <i class="fas fa-angle-double-right"></i></a></p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                 <div class="container">
                     <div class="title">
                         <h2><?= $value['ten_'.$lang]?></h2>
-                        <span class="line"></span>
+                        <span class="line fadeInUp wow" data-wow-duration="5s" data-wow-delay="0s"></span>
                         <p><?= $value['mo_ta_'.$lang]?></p>
                     </div>
                     <div class="row">
@@ -74,28 +74,32 @@
                         <div class="col-md-4 mb-2">
                             <div class="item-product">
                                 <div class="item-image">
-                                    <img src="<?= URLPATH.'img_data/images/'.$item['hinh_anh']; ?>" alt="" srcset="">
+                                <a href="<?= $item['alias_'.$lang]?>.html" type="button"><img src="<?= URLPATH.'img_data/images/'.$item['hinh_anh']; ?>" alt="" srcset=""></a>
                                 </div>
                                 <div class="item-content">
-                                    <h4 class="item-title"><?= $item['ten_'.$lang]?></h4>
+                                <a href="<?= $item['alias_'.$lang]?>.html" type="button"><h4 class="item-title"><?= $item['ten_'.$lang]?></h4></a>
                                     <p class="item-price"> 
                                         <?php if($km>0){ ?>
                                             <?=$d->vnd($km)?> 
                                         <?php }else{?>
                                             <?php if($gia==0){ ?>
-                                            <strong>Liên hệ</strong>
+                                            <strong><?= constant('_contact'); ?></strong>
                                             <?php }else{?>
                                                 <?=$d->vnd($gia)?>
                                             <?php }?>
                                         <?php }?>
                                     </p>
                                     <div class="btn-even">
-                                        <a href="<?= $item['alias_'.$lang]?>.html" class="btn btn-now buy-now" type="button">
-                                            MUA NGAY 
-                                        </a>
-                                        <a class="btn btn-buy add-cart" type="button">
-                                        THÊM VÀO <i class="fas fa-cart-plus"></i>
-                                        </a>
+                                        <form method="post" action="<?= URLPATH ?>gio-hang.html">
+                                            <a href="<?= $item['alias_'.$lang]?>.html" class="btn btn-now buy-now" type="button">
+                                                <?= constant('_buynow'); ?>
+                                            </a>
+                                            <input type="hidden" name="id" value="<?= $item['id']?>">
+                                            <input type="hidden" name="soluong" class="soluong" value="1">
+                                            <button type="submit" class="btn btn-buy add-cart" name="addcart" type="button">
+                                                <?= constant('_addcart'); ?><i class="fas fa-cart-plus"></i>
+                                            </button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -111,7 +115,7 @@
             <div class="container pt-5">
                 <div class="row">
                     <div class="offset-md-1">
-
+                    
                     </div>
                     <div class="col-md-4 text-image  pt-3">
                         <img src="assets/my/images/write.png" alt="">
@@ -122,7 +126,7 @@
                             <div class="input-group mb-3">
                                 <input type="text" name="emailFile" id="emailFile" class="form-control" placeholder="Email ...">
                                 <div class="input-group-append">
-                                    <button type="button" id="submitAddFormEmail" name="submitAddFormEmail" class="btn btn-custom">Đăng Ký</button>
+                                    <button type="button" id="submitAddFormEmail" name="submitAddFormEmail" class="btn btn-custom"><?= constant('_register'); ?></button>
                                 </div>
                             </div>
                         </form>

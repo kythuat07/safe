@@ -9,6 +9,7 @@ $color4: #06c1c8;
 $color5: #e68b15;
 $boxShadow: #22222268;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css');
 @import url('../../bootstrap/css/bootstrap.min.css');
 @import url('../../font/Fontawesome/css/all.min.css');
 @import url('../../../templates/css/styles.css');
@@ -136,16 +137,16 @@ $boxShadow: #22222268;
             }
         }
     }
-    .form-mobie {
-        display: none;
-    }
-    .form-pc {
-        display: flex;
+    .select-search {
+        border-radius: 5px 0 0 5px;
+        width: 100px;
+        border-right: 1px solid #000;
     }
     .header-content {
         margin: 18px 0 18px 0;
         .button-search {
             background-color: $colorOne;
+            text-transform: uppercase;
         }
         .image-content {
             width: 47px;
@@ -372,6 +373,7 @@ $boxShadow: #22222268;
                 text-align: center;
                 color: $mainColor;
                 font-size: 25px;
+                text-transform: uppercase;
                 font-weight: bold;
             }
             p {
@@ -697,11 +699,8 @@ $boxShadow: #22222268;
             justify-content: center;
             display: flex;
         }
-        .form-mobie {
-            display: flex;
-        }
-        .form-pc {
-            display: none;
+        .select-search {
+           width: 20px;
         }
         .header-top {
             text-align: center;
@@ -843,4 +842,85 @@ $boxShadow: #22222268;
         padding: 0 5px;
         color: $colorOne;
     }
+}
+
+.nav-right ul {
+    list-style: none;
+    padding: 0px;
+    background: #FFFFFF !important;
+    border-radius: 3px;
+    border-radius: 0 0 3px 3px;
+    border: 1px dashed #00da68;
+}
+
+.title-home2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    background: unset;
+    background-size: contain;
+    text-align: left;
+    margin-top: 13px;
+    position: relative;
+    background-color: #1ab4e8;
+    z-index: 1;
+    margin-bottom: -1px;
+    padding: 11px 6px;
+}
+
+.title-home2 {
+    span {
+        color: $backGroundColor;
+    }
+}
+
+#mainFooter .footer-content .customer ul li::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "";
+    padding-right: 3px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.nav-right ul li a {
+    display: block;
+    padding: 9px 15px;
+    color: #183764;
+}
+
+.m-5 {
+    margin: 0rem!important;
+}
+.nav-right ul li a:hover {
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+
+.buy-now {
+    box-shadow: 0xp 2px 1px 2px #000;
+    border-radius: 30px;
+    background-color: #1ab4e8;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    border-left: 2px solid #088f95;
+    border-bottom: 2px solid #088f95;
+}
+
+.textsearch {
+    border-top: 1px solid #767676;
+    border-bottom: 1px solid #767676;
+}
+
+
+.food {
+    color: #06c1c8 !important;
+}
+.drink {
+    color: #d824c1 !important;
+}
+.equipment {
+    color: #e68b15 !important;
 }
